@@ -1,8 +1,6 @@
-*{
+a{
     font-size: 25px;
     font-weight: bold;
-}
-a{
     display: inline-block;
     background: grey;
     color: black;
