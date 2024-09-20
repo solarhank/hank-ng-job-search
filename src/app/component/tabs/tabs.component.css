@@ -1,0 +1,20 @@
+a{
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    background: grey;
+    color: black;
+    padding: 10px 0;
+    width: 50%;
+}
+a:hover,
+a:focus,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+
+.active-link{
+    color: lightgrey;
+    background: black;
+}
