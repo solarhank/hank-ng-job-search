@@ -1,24 +1,22 @@
-import { effect, inject, Injectable, signal } from '@angular/core';
-import { map, Observable, tap } from 'rxjs';
+import { effect, Injectable, signal } from '@angular/core';
 import { JobModel } from '../model/job';
-import { mockHandlers } from '../../mocks';
 import { HttpClient } from '@angular/common/http';
 import { StorageService } from './storage.service';
-import { JobId, JobIds } from '../shared/types';
+import { JobId } from '../shared/types';
 import { FAVORITE_JOBS } from '../shared/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
-  private storage = inject(StorageService<JobIds>);
-  private favoritesSignal = signal<JobIds>(this.storage.get(FAVORITE_JOBS));
-  readonly favorites = this.favoritesSignal.asReadonly();
-  private apiUrl = '/jobs'; // adjust this to your API base URL
-  
-  constructor(private readonly httpClient: HttpClient) {
+  constructor(private readonly httpClient: HttpClient, private storage: StorageService<JobId[]>) {
     effect(() => this.storage.set(FAVORITE_JOBS, this.favoritesSignal()));
   }
+
+  private favoritesSignal = signal<JobId[]>(this.storage.get(FAVORITE_JOBS));
+  readonly favorites = this.favoritesSignal.asReadonly();
+  private apiUrl = '/jobs'; // adjust this to your API base URL
+
   // //TODO: type
   // getJob(id: string): Observable<any> {
   //   return this.http.get(`${this.apiUrl}/${id}`);
