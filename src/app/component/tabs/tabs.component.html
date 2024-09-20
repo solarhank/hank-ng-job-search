@@ -1,5 +1,8 @@
-@for(tab of tabs; track tab.title){
-    <a routerLink="{{tab.path}}">
-        {{ tab.title }}
-    </a>
-}
+<div>
+    <h1>Find your job</h1>
+    @for(tab of tabs; track tab.title;){
+        <a routerLink="{{tab.path}}" routerLinkActive="active-link">
+            {{ tab.title }}
+        </a>
+    }
+</div>

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { StorageService } from './storage.service';
 import { JobId } from '../shared/types';
 import { FAVORITE_JOBS } from '../shared/constants';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,13 +23,8 @@ export class JobService {
   //   return this.http.get(`${this.apiUrl}/${id}`);
   // }
 
-  // //TODO: type
-  getAllJobs(): JobModel[] {
-    return [];
-    // return this.httpClient.get<JobModel[]>(this.apiUrl).pipe(
-    //   tap((data) => console.log('getAllJobs', data)),
-    //   map((data) => data)
-    // )
+  getAllJobs(): Observable<JobModel[]> {
+    return this.httpClient.get<JobModel[]>(this.apiUrl);
   }
 
   toggleFavorite(id: JobId): void {

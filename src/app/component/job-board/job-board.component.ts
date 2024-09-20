@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from '../../service/job.service';
+import { JobModel } from '../../model/job';
 
 @Component({
   selector: 'app-job-board',
@@ -12,7 +13,11 @@ export class JobBoardComponent implements OnInit {
   constructor(private readonly jobService: JobService) {
     //Empty
   }
+  data: JobModel[] = [];
+
   ngOnInit(): void {
-    const temp = this.jobService.getAllJobs();
+    this.jobService.getAllJobs().subscribe(response =>
+      this.data = response
+    );
   }
 }

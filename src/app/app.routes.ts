@@ -4,7 +4,8 @@ import { FavoritesBoardComponent } from './component/favorites-board/favorites-b
 import { DetailComponent } from './component/detail/detail.component';
 
 export const routes: Routes = [
-    {path: "", component: JobBoardComponent},
+    { path: '', redirectTo: '/board', pathMatch: 'full' },
+    {path: "board", component: JobBoardComponent},
     {path: "favorites", component: FavoritesBoardComponent},
     {path: "detail/:id", component: DetailComponent}
 ];
