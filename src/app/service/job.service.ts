@@ -5,6 +5,7 @@ import { StorageService } from './storage.service';
 import { JobId } from '../shared/types';
 import { FAVORITE_JOBS } from '../shared/constants';
 import { Observable } from 'rxjs';
+import { JobDetailModel } from '../model/job-detail';
 
 @Injectable({
   providedIn: 'root'
@@ -19,9 +20,9 @@ export class JobService {
   private apiUrl = '/jobs'; // adjust this to your API base URL
 
   // //TODO: type
-  // getJob(id: string): Observable<any> {
-  //   return this.http.get(`${this.apiUrl}/${id}`);
-  // }
+  getJob(id: string): Observable<JobDetailModel> {
+    return this.httpClient.get<JobDetailModel>(`${this.apiUrl}/${id}`);
+  }
 
   getAllJobs(): Observable<JobModel[]> {
     return this.httpClient.get<JobModel[]>(this.apiUrl);
