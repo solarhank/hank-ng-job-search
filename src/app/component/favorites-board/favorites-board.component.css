@@ -1,0 +1,32 @@
+.row{
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+.job{
+    text-align: left;
+    margin-top: 25px;
+    max-width: 813px;
+    display: inline-block;
+    color: black;
+}
+
+.job-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+img{
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.job-info{
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+}
+
+.job-company{
+    margin-right: 25px;
+}

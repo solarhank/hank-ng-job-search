@@ -1,1 +1,12 @@
-<p>favorites-board works!</p>
+@for(row of data; track row.id){
+    <div class="row">
+        <a class="job" [routerLink]="['/detail', row.id]">
+            <img src="{{row.companyLogo}}" alt="{{row.companyName}}" width="50" height="50"/>
+            <div class="job-info">
+                <span class="job-title">{{ row.title }}</span><br>
+                <span class="job-company">Company: {{ row.companyName }}</span>
+                <span>Reference: {{ row.reference }}</span>
+            </div>
+        </a>
+    </div>
+}

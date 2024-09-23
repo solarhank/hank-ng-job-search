@@ -8,8 +8,6 @@
                 <span>Reference: {{ row.reference }}</span>
             </div>
         </a>
-        <a class="favorite-toggle">
-            <span class="icon-star"></span>
-        </a>
+        <span class="icon-star" (click)="toggleFavorite(row.id)" [class.active]="jobService.favorites().includes(row.id)"></span>
     </div>
 }
