@@ -31,10 +31,13 @@ img{
     margin-right: 25px;
 }
 
-.favorite-toggle{
+.icon-star{
     display: inline-block;
-    width: 5%;
     position: relative;
-    top: 30px;
+    top: 35px;
     font-size: 25px;
+}
+
+.icon-star:hover{
+    cursor: pointer;
 }
