@@ -1,0 +1,59 @@
+* {
+    text-align: left;
+    position: relative;
+}
+
+.back-button {
+    margin: 25px 0;
+}
+
+.back-button a {
+    display: block;
+    background: grey;
+    color: black;
+    max-width: 75px;
+    padding: 10px 0 10px 20px;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus,
+a:visited,
+a:active{
+    opacity: .8;
+    text-decoration: none;
+}
+
+.header, .tags {
+    margin-bottom: 10px;
+}
+
+.header img,
+.header h1 {
+    display: inline-block;
+}
+
+.header img {
+    max-width: 10%;
+}
+
+.header h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(1%, -50%);
+}
+
+.pill {
+    display: inline-block;
+    background: black;
+    color: lightgray;
+    padding: 5px 10px;
+    border-radius: 16px;
+    margin-right: 5px;
+}
+
+.info span{
+    display: inline-block;
+    margin-bottom: 10px;
+}

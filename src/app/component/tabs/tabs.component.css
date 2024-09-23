@@ -7,10 +7,11 @@ a{
     padding: 10px 0;
     width: 50%;
 }
-a:hover,
 a:focus,
+a:hover,
 a:visited,
 a:active{
+    opacity: .8;
     text-decoration: none;
 }
 
