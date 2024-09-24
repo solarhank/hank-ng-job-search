@@ -17,7 +17,7 @@ span.icon-star.active {
 }
 
 body{
-    width: 45%;
+    max-width: 850px;
     margin: 0 auto;
     background: lightgrey;
     color: black;

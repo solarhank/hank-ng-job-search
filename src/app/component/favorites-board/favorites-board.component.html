@@ -1,3 +1,7 @@
+@if(data.length == 0){
+    <br><span>No favorites selected</span>
+}
+
 @for(row of data; track row.id){
     <div class="row">
         <a class="job" [routerLink]="['/detail', row.id]">
