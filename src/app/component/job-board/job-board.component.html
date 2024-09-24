@@ -8,6 +8,6 @@
                 <span>Reference: {{ row.reference }}</span>
             </div>
         </a>
-        <span class="icon-star" (click)="toggleFavorite(row.id)" [class.active]="jobService.favorites().includes(row.id)"></span>
+        <span class="icon-star" [id]="'star-' + row.id" (click)="toggleFavorite(row.id)" [class.active]="jobService.favorites().includes(row.id)"></span>
     </div>
 }
