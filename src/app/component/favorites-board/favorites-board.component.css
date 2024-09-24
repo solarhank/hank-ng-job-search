@@ -6,7 +6,7 @@
 .job{
     text-align: left;
     margin-top: 25px;
-    max-width: 813px;
+    width: 100%;
     display: inline-block;
     color: black;
 }
